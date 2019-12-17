@@ -1,186 +1,95 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #F0F0F0;
-    height: 100%;
-}
-
-.mainestcontent {
-    min-height: 100%;
-}
-
-.maincontent {
-    padding-bottom: 200px;
+	background: aqua;
 }
 
 .container {
-    width: 80%;
-    background-color: white;
-    margin: 0 auto;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .header {
-    height: 150px;
-    display: flex;
+	height: 100px;
+	background: white;
+	display: flex;
+	font-size: 1.7em;
 }
 
-#logo {
-    height: 100px;
-    margin: 25px auto auto 100px;
+.logo {
+	margin: 5px auto auto 35px;
+	height: 90px;
+	width: 90px;
+	background-image: url("../images/mainlogo.png");
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
-.menu {
-    margin: auto 0 0px auto;
-    padding: 0;
+.header ul {
+	margin: auto 0px 0px auto;
 }
 
-a {
-    text-decoration: none;
-}
-
-.menu li {
-    display: inline-block;
+.header li {
+	display: inline-block;
     padding: 15px 30px 15px 30px;
-    font-size: 23px;
+    font-size: 0.7em;
     color: #000;
     font-family: 'Exo 2', sans-serif;
+    line-height: 1.136364;
+    text-transform: uppercase;
 }
 
-li:hover {
+.header li:hover {
     background-color: black;
     color: white;
 }
 
-.main {
-    display: block;
+.content_1 {
+	background: green;
+	width: 100%;
+	height: 600px;
 }
 
-.rights {
-    display: flex;
-    float: right;
-    margin-top: 15px;
-    margin-right: 20px;
-    font-family: 'Rubik', sans-serif;
-    color: black;
-}
 
-.content1  {
-    width: 100%;
-    height: 600px;
-    background-color: #004039;
-}
 
-.drinks {
-    position: absolute;
-}
 
-#latte {
-    height: 400px;
-    width: 370px;
-    background-image: url("../images/latte.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-    left: 31%;
-    top: 350px;
-}
-
-#hotchocolate {
-    background-image: url("../images/hotchocolate.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 380px;
-    height: 420px;
-    z-index: 2;
-    left: 62%;
-    top: 330px;
-}
-
-#whitehotchocolate {
-    background-image: url("../images/whitehotchocolate.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 380px;
-    height: 450px;
-    z-index: 2;
-    left: 46%;
-    top: 300px;
-}
-
-.slogan_1 {
-    position: absolute;
-    color: white;
-    font-family: 'Nunito', sans-serif;
-    font-size: 100px;
-    left: 13%;
-    top: 180px;
-}
-
-.content2 {
-    width: 100%;
-    height: 600px;
-    background-image: url("../images/texturepaper.jpg");
-    position: relative;
-}
-
-.slogan_2 {
-    font-family: 'Montserrat', sans-serif;
-    color: #007042;
-    position: absolute;
-    top: 10%;
-    left: 30%;
-}
-
-.slogan_2 p {
-    margin: 0;
-}
-
-.slogan_2 b {
-    color: #E45D09;
-}
-
-#bonus {
-    font-size: 90px;
-    transform: scaleY(2);
-
-}
-
-#app {
-    margin-top: 30px;
-    font-size: 55px;
-}
-
-#coffeepic {
-    position: absolute;
-    left: 12%;
-    top: 2%;
-    height: 98%;
-    width: 350px;
-    background-image: url("../images/coffeeimg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.buttons {
-    position: absolute;
-    display: inline-flex;
-    top: 60%;
-    left: 40%;
-}
-
-.buttons p {
-    margin: 0;
-    margin-right: 50px;
-}
-
-.buttons img {
-    height: 100px;
-    width: 310px;
-}
-
-.footer {
-    margin-top: -180px;
-    width: 100%;
-    height: 200px;
-    background: white;
+@media only screen and (max-width: 1024px) {
+	.container {
+		width: 100%;
+	}
+	
+	.header {
+		height: auto;
+	}
+	
+	.header li {
+		font-size: 1.5em;
+		display: block;
+		border-left: 10px solid black;
+		margin: 20px;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	.logo {
+		margin: 10px;
+		height: 200px;
+		width: 200px;
+	}
+	
+	.header ul {
+		margin: auto 0px 0px auto;
+		font-size: 1em;
+	}
+	
+	.content_1 {
+		background: green;
+		width: 100%;
+		height: 1100px;
+	}
 }
