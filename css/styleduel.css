@@ -17,3 +17,7 @@ body {
 	height: 50%;
 	background-color: #8585FF;
 }
+
+p {
+	font-size: 6em;
+}
