@@ -1,0 +1,19 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.santa1 {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	background-color: #8591FF;
+}
+
+.santa2 {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	height: 50%;
+	background-color: #8585FF;
+}
