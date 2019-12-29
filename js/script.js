@@ -1,14 +1,14 @@
-var score1 = 0;
-scorefirst.innerHTML = score1;
-var score2 = 0;
-scoresecond.innerHTML = score2;
+s2win.style.display = "none";
+s1win.style.display = "none";
 
 function santa1() {
-	score1 = score1 + 1;
-	scorefirst.innerHTML = score1;
+	s1win.style.display = "flex";
+}
+function santa2() {
+	s2win.style.display = "flex";
 }
 
-function santa2() {
-	score2 = score2 + 1;
-	scoresecond.innerHTML = score2;
+function newgame() {
+	s2win.style.display = "none";
+	s1win.style.display = "none";
 }
