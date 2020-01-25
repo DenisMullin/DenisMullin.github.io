@@ -1,0 +1,84 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #E4E4E4;
+}
+
+.main {
+	background-color: #fff;
+	border-radius: 10px;
+	width: 70%;
+	height: 400px;
+	margin: 10% auto;
+	display: flex;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+}
+
+p {
+	margin: 0px;
+	padding: 0px;
+	font-family: Roboto;
+	font-size: 3em;
+}
+
+.player {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	display: flex;
+	height: 50%;
+	width: 40%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	border-radius: 100px;
+}
+
+#duo {
+	z-index: 3;
+	margin: auto auto -5% 4%;
+}
+
+#solo {
+	z-index: 3;
+	margin: auto 4% -5% auto;
+}
+
+.logo {
+	width: 90%;
+	height: 100%;
+	left: 5%;
+	top: -10%;
+	background-image: url("../images/logo1.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+@media (max-width: 700px) {
+	.main {
+		display: block;
+		position: inherit;
+		width: 95%;
+		height: 900px;
+		margin: 5% auto;
+	}
+	.logo {
+		position: inherit;
+		width: 90%;
+		height: 21%;
+		margin: auto;
+
+	}
+	.player {	
+		height: 150px;
+		width: 90%;
+	}
+	#duo {
+		margin: 10% 5%;
+	}
+	
+	#solo {
+		margin: 10% 5%;
+	}
+}
