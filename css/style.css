@@ -55,30 +55,42 @@ p {
 	position: absolute;
 }
 
-@media (max-width: 700px) {
+@media all and (max-width: 800px) {
 	.main {
+		width: 90%;
+		height: 650px;
+		top: 2%;
+		margin: 0;
+		left: 5%;
+		position: fixed;
 		display: block;
-		position: inherit;
-		width: 95%;
-		height: 900px;
-		margin: 5% auto;
-	}
-	.logo {
-		position: inherit;
+}
+	.player {
+		height: 30%;
 		width: 90%;
-		height: 21%;
-		margin: auto;
-
-	}
-	.player {	
-		height: 150px;
-		width: 90%;
-	}
+		margin: 5% auto; 
+		text-align: center;
+		align-items: center;
+		border-radius: 100px;
+}
 	#duo {
-		margin: 10% 5%;
-	}
-	
+		z-index: 3;
+		margin-top: 40%; 
+		margin-bottom: 50px;
+}
+
 	#solo {
-		margin: 10% 5%;
+		z-index: 3;
+	}
+
+	.logo {
+		width: 98%;
+		height: 130%;
+		margin: 1%;
+		height: 20%;
+		left: auto;
+		top: auto;
+		position: block;
+		display: flex;
 	}
 }
