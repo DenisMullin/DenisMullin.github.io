@@ -95,6 +95,17 @@ p {
 		width: 400px;
 		height: 400px;
 	}
+	.standart {
+		height: 2em;
+		font-size: 1em;
+	}
+	.error {
+		height: 2em;
+		font-size: 1em;
+	}
+	#button {
+		font-size: 1em;
+	}
 }
 
 @media all and (max-width: 450px) {
@@ -108,11 +119,11 @@ p {
 	}
 	.standart {
 		height: 2em;
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 	.error {
 		height: 2em;
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 	#button {
 		font-size: 1em;
