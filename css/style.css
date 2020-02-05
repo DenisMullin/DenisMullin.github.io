@@ -20,6 +20,7 @@ p {
 	padding: 0px;
 	font-family: Roboto;
 	font-size: 3em;
+	cursor: pointer;
 }
 
 .player {
@@ -32,6 +33,7 @@ p {
 	justify-content: center;
 	background-color: #fff;
 	border-radius: 100px;
+	cursor: pointer;
 }
 
 #duo {
