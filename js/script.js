@@ -2,5 +2,5 @@ function duoplay() {
 	document.location.href = "duo.html";
 }
 function soloplay() {
-	console.log('solo')
+	document.location.href = "solo.html";
 }
