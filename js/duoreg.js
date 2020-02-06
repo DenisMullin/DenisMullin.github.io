@@ -9,13 +9,16 @@ var error1f = document.getElementById("error1f");
 var error2s = document.getElementById("error2s");
 var error2l = document.getElementById("error2l");
 var error2f = document.getElementById("error2f");
-var back = document.getElementById("back");
 error1s.hidden = true;
 error1l.hidden = true;
 error1f.hidden = true;
 error2s.hidden = true;
 error2l.hidden = true;
 error2f.hidden = true;
+var back = document.getElementById("back");
+var playernamex = document.getElementById("playernamex");
+var playernameo = document.getElementById("playernameo");
+
 
 function forbiddenChar (a) {
 	for (let char of a)
@@ -110,6 +113,8 @@ function players()
 	{
 		hide.hidden = true;
 		back.hidden = true;
+		playernamex.innerHTML = name1.value;
+		playernameo.innerHTML = name2.value;
 		return false;
 	}
 
