@@ -9,6 +9,7 @@ var error1f = document.getElementById("error1f");
 var error2s = document.getElementById("error2s");
 var error2l = document.getElementById("error2l");
 var error2f = document.getElementById("error2f");
+var back = document.getElementById("back");
 error1s.hidden = true;
 error1l.hidden = true;
 error1f.hidden = true;
@@ -108,6 +109,7 @@ function players()
 	else
 	{
 		hide.hidden = true;
+		back.hidden = true;
 		return false;
 	}
 
