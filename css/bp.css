@@ -1,0 +1,17 @@
+.buypizza img {
+	width: 400px;
+}
+
+.buypizza {
+	margin-top: 100px;
+	display: flex;
+}
+
+.bpdesc {
+	margin-left: 100px;
+}
+
+#buy {
+	width: 500px;
+	height: 100px;
+}

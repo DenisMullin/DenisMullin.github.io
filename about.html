@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>site</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/ab.css">
+</head>
+<body>
+	<div class="content">
+		<div class="header">
+			<a href="index.html">
+				<div class="logo"></div>
+			</a>
+			<div class="menu">
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="pizza.html">Пицца</a></li>
+					<li><a href="about.html">Отзывы и обратная связь</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="maincontent">
+			<div class="message">
+				<h1>Наши контакты</h1>
+				<div class="cont"><div class="telicon"></div><p> 8(800)123-45-67</p></div>
+				<div class="cont"><div class="mailicon"></div><p>dominos@mail.ru</p></div>
+				<div class="cont"><div class="locicon"></div><p>г. Город, ул. Улица, д. Дом, к. Корпус</p></div>
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2216.536316717482!2d34.33357901610295!3d56.251519460884246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46c9c316fee7b63f%3A0xba569196a9963873!2z0YPQuy4g0JzQsNGA0LDRgtCwLCAyNSwg0KDQttC10LIsINCi0LLQtdGA0YHQutCw0Y8g0L7QsdC7LiwgMTcyMzgx!5e0!3m2!1sru!2sru!4v1581983896154!5m2!1sru!2sru" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+				<h1>Оставьте свой отзыв!</h1>
+				<form onsubmit="return validForm()" action="ty.html" method="GET">
+					<p>Ваше имя</p>
+					<input id="name" type="text" name="name" placeholder="Иван Петров">
+					<div class="error" id="errorname" hidden><p>Это поле не должно быть короче 2 символов</p></div>
+					<p>Текст отзыва</p>
+					<textarea placeholder="Ваш отзыв" cols="50" rows="5" id="clientmessage"></textarea>
+					<div class="error" id="errormessage" hidden><p>Это поле не должно быть короче 10 символов</p></div>
+					<p>Ваша почта</p>
+					<input id="mail" type="email" name="mail" placeholder="example@mail.ru">
+					<div class="error" id="errormail" hidden><p>Это поле не должно быть пустым</p></div>
+					<br>
+					<button type="submit">Отправить</button>
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<p>&copy;Все права защищены</p>
+	</div>
+
+	<script type="text/javascript" src="scripts/script.js"></script>
+
+</body>
+</html>
