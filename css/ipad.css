@@ -31,6 +31,8 @@ a {
 
 .title {
 	font-family: 'Montserrat', sans-serif;
+	margin: 15px auto auto auto;
+	padding-bottom: 15px;
 	color: #000;
 	text-align: center;
 }
@@ -38,7 +40,8 @@ a {
 .slogan {
 	font-family: 'Raleway', sans-serif;
 	text-align: center;
-	padding-bottom: 10px;
+	margin: 0px;
+	padding-bottom: 15px;
 }
 
 .content {
@@ -74,4 +77,48 @@ a:active {
 .name {
 	font-family: 'Nunito', sans-serif;
 	color: #D3CAAD;
+}
+
+.content1 {
+	margin: 40px 50px 50px 50px;
+}
+
+#intro {
+	color: #263C68;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.content1 h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+}
+
+.content1 a {
+	color: #0000FF;
+	font-family: 'Nunito', sans-serif;
+}
+
+.content1 a:hover {
+	color: #0000FF;
+	text-decoration: underline;
+}
+
+.content1 a:visited {
+	color: #0000FF;
+}
+
+.list {
+	padding: 0;
+	padding-bottom: 22px; 
+}
+
+.elist {
+	list-style-type: none;
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+
+.task {
+	margin-bottom: 30px;
+	box-shadow: 0 6px 1px -4px rgba(0, 0, 0, .1);
 }
