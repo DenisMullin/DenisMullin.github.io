@@ -31,7 +31,8 @@ a {
 
 .title {
 	font-family: 'Montserrat', sans-serif;
-	margin: 15px auto auto auto;
+	margin: 0px;
+	padding-top: 15px;
 	padding-bottom: 15px;
 	color: #000;
 	text-align: center;
