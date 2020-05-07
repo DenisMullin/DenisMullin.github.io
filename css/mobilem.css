@@ -74,9 +74,14 @@ a:active {
 }
 
 .name {
+	font-size: 0.9em;
 	text-align: center;
 	font-family: 'Nunito', sans-serif;
 	color: #D3CAAD;
+}
+
+#societyname, #engname {
+	font-size: 0.8em;
 }
 
 .content1 {
