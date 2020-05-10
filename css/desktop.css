@@ -94,6 +94,11 @@ a:active {
 	font-size: 1.5em;
 }
 
+.content1 h2 {
+	font-family: 'Nunito', sans-serif;
+	font-size: 1.5em;
+}
+
 .content1 a {
 	color: #0000FF;
 	font-family: 'Nunito', sans-serif;
@@ -122,4 +127,22 @@ a:active {
 .task {
 	margin-bottom: 30px;
 	box-shadow: 0 6px 1px -4px rgba(0, 0, 0, .1);
+}
+
+.teoria {
+	font-family: 'Roboto Mono', monospace;
+}
+
+.tasktext {
+	font-family: 'Nunito', sans-serif;
+}
+
+.math {
+	display: inline-block;
+	margin-right: 50px;
+	text-align: center;
+}
+
+.answer {
+	font-family: 'Nunito', sans-serif;
 }
