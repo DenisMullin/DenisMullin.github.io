@@ -81,12 +81,13 @@ a:active {
 }
 
 .content1 {
-	margin: 40px 50px 50px 50px;
+	margin: 16px 50px 50px 50px;
 }
 
 #intro {
 	color: #263C68;
 	font-family: 'Roboto Mono', monospace;
+	margin: 40px 100px 0 100px;
 }
 
 .content1 h1 {
