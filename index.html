@@ -7,22 +7,31 @@
 	
 </head>
 <body>
-
-	<?php if (isset($_SESSION['succes_signup'])) {
-		echo $_SESSION['succes_signup'];
-		unset($_SESSION['succes_signup']);
-	}?>
-
-	<?php require_once "p/header.php"; ?>
+	<div class="header">
+	<div class="header-logo">
+	<div class="main-header">
+		<a href="/" id="title"><div class="title"><h1>makara.com</h1></div></a>
+		<p class="subtitle">полезная информация и помощь студентам</p>
+	</div>
+	<div class="login">
+		<div class="inout">
+			<a href="#">Вход</a>
+			<a href="#">Регистрация</a>
+		</div>
+	</div>
+	</div>
+</div>
+<div style="height: 1px; background-color: #eee"></div>
 
 	<div class="main">
-	<?php 
-		if($_SESSION['logged_user']['code'] == $makara_code) {
-			require_once "p/hide_panel.php";
-		} else {
-			require_once "p/panel.php";
-		}
-	?>
+		<div class="panel">
+		<div class="panel-items"></div>
+			<a class="panel-item" href="#"><div>новости</div></a>
+			<a class="panel-item" href="#"><div>полезная информация</div></a>
+			<a class="panel-item" href="#"><div>вопрос/ответ</div></a>
+		</div>
+	</div>
+<div style="height: 1px; background-color: #bbb"></div>
 		<div class="wrap">
 			<p>Информация о сайте</p>
 		</div>
