@@ -1,59 +1,32 @@
+<?php
+	session_start();
+	include_once "vendor/code_check.php";
+?>
+
+
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-	<title>Learnege</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" media="only screen and (min-width: 1050px)" href="css/desktop.css">
-	<link rel="stylesheet" type="text/css" media="only screen and (min-width: 768px) and (max-width: 1049px)" href="css/ipad.css">
-	<link rel="stylesheet" type="text/css" media="only screen and (min-width: 376px) and (max-width: 767px)" href="css/mobilel.css">
-	<link rel="stylesheet" type="text/css" media="only screen and (min-width: 321px) and (max-width: 375px)" href="css/mobilem.css">
-	<link rel="stylesheet" type="text/css" media="only screen and (max-width: 320px)" href="css/mobiles.css">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
-</head>
-<body>	
-	<div class="maincontent">
-		<div class="header">
-			<a href="index.html"><h1 class="title">LEARNEGE</h1></a>
-			<p class="slogan">Вся необходимая теория для самоподготовки к ЕГЭ 2021</p>
-		</div>
-		<div class="content"><a href="profmath.html"><div class="wrap" id="profmath"><p class="name">ПРОФИЛЬНАЯ МАТЕМАТИКА</p></div></a><a href="bazmath.html"><div class="wrap" id="bazmath">
-					<p id="bazaname" class="name">БАЗОВАЯ МАТЕМАТИКА</p>
-				</div></a><a href="blank.html">
-				<div class="wrap" id="rus">
-					<p class="name">РУССКИЙ ЯЗЫК</p>
-				</div></a><a href="blank.html">
-				<div class="wrap" id="lit">
-					<p class="name">ЛИТЕРАТУРА</p>
-				</div></a><a href="blank.html">
-				<div class="wrap" id="ikt">
-					<p class="name">ИНФОРМАТИКА</p>
-				</div></a><a href="blank.html">
-				<div class="wrap" id="emc">
-					<p class="name">ФИЗИКА</p>
-				</div></a><a href="blank.html">
-				<div class="wrap" id="soc">
-					<p id="societyname" class="name">ОБЩЕСТВОЗНАНИЕ</p>
-				</div></a><a href="blank.html">
-				<div class="wrap" id="his">
-					<p class="name">ИСТОРИЯ</p>
-				</div></a><a href="blank.html">
-				<div class="wrap" id="bio">
-					<p class="name">БИОЛОГИЯ</p>
-				</div></a><a href="blank.html">
-				<div class="wrap" id="him">
-					<p class="name">ХИМИЯ</p>
-				</div></a><a href="blank.html">
-				<div class="wrap" id="eng">
-					<p id="engname" class="name">АНГЛИЙСКИЙ ЯЗЫК</p>
-				</div></a><a href="blank.html">
-				<div class="wrap" id="geo">
-					<p class="name">ГЕОГРАФИЯ</p>
-				</div></a>
+<html>
+	<?php require_once "p/head.php" ?>
+<body>
+
+	<?php if (isset($_SESSION['succes_signup'])) {
+		echo $_SESSION['succes_signup'];
+		unset($_SESSION['succes_signup']);
+	}?>
+
+	<?php require_once "p/header.php"; ?>
+
+	<div class="main">
+	<?php 
+		if($_SESSION['logged_user']['code'] == $makara_code) {
+			require_once "p/hide_panel.php";
+		} else {
+			require_once "p/panel.php";
+		}
+	?>
+		<div class="wrap">
+			<p>Информация о сайте</p>
 		</div>
 	</div>
-	<div class="footer"></div>
 </body>
 </html>
