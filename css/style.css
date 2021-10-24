@@ -321,6 +321,6 @@ button {
 
 @media screen and (max-width: 800px) {
 	p, a, h1, h2, h3 {
-		font-size: 1em;
+		font-size: 3em;
 	}
 }
