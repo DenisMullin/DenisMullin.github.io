@@ -1,0 +1,64 @@
+<?php 
+	session_start();
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<?php require_once "p/head.php"; ?>
+</head>
+<body>
+	<?php require_once "p/header.php"; ?>
+	<div class="main">
+		<div class="wrap-signup">
+			<h2>Регистрация</h2>
+			<form action="vendor/check.php" method="post">
+				<input type="text" name="login" id="login" placeholder="Логин"><br>
+				<?php
+					if (isset($_SESSION['login_error'])) {
+						echo '<p class="reg-error">'.$_SESSION['login_error'].'</p>';
+						unset($_SESSION['login_error']);
+						unset($_SESSION['login_len_error']);
+						unset($_SESSION['name_len_error']);
+						unset($_SESSION['pass_len_error']);
+						unset($_SESSION['pass_error']);
+					} elseif (isset($_SESSION['login_len_error'])) {
+						echo '<p class="reg-error">'.$_SESSION['login_len_error'].'</p>';
+						unset($_SESSION['login_len_error']);
+						unset($_SESSION['name_len_error']);
+						unset($_SESSION['pass_len_error']);
+						unset($_SESSION['pass_error']);
+					}
+				?>
+				<input type="text" name="name" id="name" placeholder="Имя"><br>
+				<?php 
+					if (isset($_SESSION['name_len_error'])) {
+						echo '<p class="reg-error">'.$_SESSION['name_len_error'].'</p>';
+						unset($_SESSION['name_len_error']);
+						unset($_SESSION['pass_len_error']);
+						unset($_SESSION['pass_error']);
+					}
+				?>
+				<input type="password" name="pass" id="pass" placeholder="Пароль"><br>
+				<?php
+					if (isset($_SESSION['pass_len_error'])) {
+						echo '<p class="reg-error">'.$_SESSION['pass_len_error'].'</p>';
+						unset($_SESSION['pass_len_error']);
+						unset($_SESSION['pass_error']);
+					}
+				?>
+				<input type="password" name="pass_verified" id="pass_verified" placeholder="Пароль ещё раз"><br>
+				<?php
+					if (isset($_SESSION['pass_error'])) {
+						echo '<p class="reg-error">'.$_SESSION['pass_error'].'</p>';
+						unset($_SESSION['pass_error']);
+					}
+				?>
+				<button type="submit">Зарегистрироваться</button>
+			</form>
+		</div>
+	</div>
+	
+</body>
+</html>

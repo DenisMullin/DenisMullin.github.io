@@ -1,0 +1,81 @@
+<?php
+session_start();
+require_once "vendor/connect.php";
+include_once "vendor/code_check.php";
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<?php require_once "p/head.php"; ?>
+</head>
+<body>
+
+	<?php require_once "p/header.php"; ?>
+
+	<div class="main">
+	<?php 
+		if( ($_SESSION['logged_user']['code'] != '') && ($_SESSION['logged_user']['code'] == $makara_code) ) {
+			require_once "p/hide_panel.php";
+		} else {
+			require_once "p/panel.php";
+		}
+	?>
+		<div class="wrap">
+			<?php $question_id = $_GET['id']; ?>
+			<?php $question_n = $mysqli->query("SELECT * FROM `questions` WHERE `id` = '$question_id'"); ?>
+			
+			<?php
+				$question = mysqli_fetch_assoc($question_n);
+				$q_id = $question['id'];
+				echo
+				'
+				<div class="post">
+					<div class="content">
+						<p class="sh-text">'.$question["q-text"].'</p>
+						<div class="sh">
+							<p class="sh-name">'.$question["q-name"].'</p>';
+							if ($question["q-vk"] != "not_added"){
+								echo '<a href="https://vk.com/'.$question["q-vk"].'" class="sh-vk"></a>';
+							}
+							if ($_SESSION['logged_user']) {
+								echo
+								'
+								<p class="answer-button" onclick="showAnswerForm('.$q_id.')">ответить</p>
+								';
+							}
+							echo'
+						</div>
+					</div>';
+					if ($_SESSION['logged_user']) {
+						echo 
+						'
+						<div class="content-answer-form" id="'.$q_id.'" hidden>
+							<form action="vendor/new_answer.php" method="post">
+								<textarea name="answer"></textarea>
+								<input hidden name="c_id" value="'.$q_id.'">
+								<button type="submit">ответить</button>
+							</form>
+						</div>
+						';
+					}
+				$answers = $mysqli->query("SELECT * FROM `answers` WHERE `comment-id` = $q_id");
+				foreach ($answers as $ans) {
+					echo
+					'
+					<div class="content-answer">
+						<p class="content-answer-text">'.$ans["a-text"].'</p>
+						<p>'.$ans["a-name"].'</p>
+					</div>
+					';
+				}
+			?>
+
+			<script type="text/javascript" src="js/script.js"></script>
+
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1, p, a {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+div.wrap a:hover, div.login a:hover, div.panel a:hover {
+	text-decoration: underline;
+}
+
+div.header {
+	width: 100%;
+	margin: 0px 0px 15px 0px;
+	padding-top: 15px;
+}
+
+div.header-logo {
+	width: 70%;
+	margin-left: 15%;
+	display: flex;
+}
+
+div.main-header {
+	width: 70%;
+}
+
+div.login {
+	width: 30%;
+	position: relative;
+}
+
+div.inout {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	right: 0;
+}
+
+div.panel {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.panel-items {
+}
+
+a.panel-item div {
+	padding: 15px 30px 15px 30px;
+}
+
+div.wrap {
+	margin: 30px 15% 100px 15%;
+}
+
+div.title {
+	display: inline-block;
+}
+
+div.main p {
+	margin: 5px 0px 5px 0px;
+}
+
+div.content {
+	padding: 10px;
+	width: 60%;
+	margin-bottom: 20px;
+	border: 1px solid #eee;
+}
+
+div.content p {
+	margin: 5px;
+}
+
+div.new-post {
+	display: flex;
+}
+
+div.submit button {
+	margin: 0px 0px 0px 10px;
+}
+
+div.text textarea {
+	resize: none;
+	border: 0;
+	border-bottom: 1px solid #000;
+}
+
+div.text textarea:focus, input:focus {
+	outline: 0;
+}
+
+div.text textarea:hover {
+}
+
+div.form-comment {
+	width: 60%;
+	padding: 10px;
+}
+
+
+
+input {
+	border: 0;
+	border-bottom: 1px solid #000;
+	margin: 5px 0px 5px 0px;
+}
+
+button {
+	padding: 5px 20px 5px 20px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+	box-shadow: none;
+}
+
+* {
+	background-color: #000;
+	color: #fff;
+}
+
+input {
+	border: 0;
+	border-bottom: 1px solid #fff;
+	margin: 5px 0px 5px 0px;
+}
+
+button {
+	padding: 5px 20px 5px 20px;
+	background-color: #000;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+	box-shadow: none;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}

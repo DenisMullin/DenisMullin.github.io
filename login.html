@@ -1,0 +1,33 @@
+<?php
+session_start();
+include_once "vendor/code_check.php";
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<?php require_once "p/head.php"; ?>
+</head>
+<body>
+	<?php require_once "p/header.php"; ?>
+	<div class="main">
+		<div class="wrap-signup">
+			<h2>Вход</h2>
+			<form action="vendor/login_check.php" method="post">
+				<input type="text" placeholder="Логин" name="log_login"><br>
+				<input type="password" placeholder="Пароль" name="log_pass"><br>
+				<?php 
+					if (isset($_SESSION['login_error'])) {
+						echo $_SESSION['login_error'];
+						echo "<br>";
+						unset($_SESSION['login_error']);
+					} else {}
+				 ?>
+				<button type="submit">Войти</button>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

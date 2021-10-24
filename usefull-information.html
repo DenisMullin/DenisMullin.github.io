@@ -9,11 +9,6 @@
 	<?php require_once "p/head.php" ?>
 <body>
 
-	<?php if (isset($_SESSION['succes_signup'])) {
-		echo $_SESSION['succes_signup'];
-		unset($_SESSION['succes_signup']);
-	}?>
-
 	<?php require_once "p/header.php"; ?>
 
 	<div class="main">
@@ -25,7 +20,23 @@
 		}
 	?>
 		<div class="wrap">
-			<p>Информация о сайте</p>
+			<form action="usefull-information.php" method="get">
+				<select name="fakultet">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<br>
+				<button type="submit">показать</button>
+			</form>
+			<?php
+				$fklt = $_GET['fakultet'];
+				if ($fklt == 1) {
+					require_once "angl.php";
+				}
+			?>
 		</div>
 	</div>
 </body>

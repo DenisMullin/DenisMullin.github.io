@@ -1,0 +1,58 @@
+<?php session_start(); require_once "vendor/code_check.php";?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<?php require_once "p/head.php"; ?>
+</head>
+<body>
+
+	<?php require_once "p/header.php"; ?>
+	
+	<div class="main">
+		
+		<?php if( ($_SESSION['logged_user']['code'] != '') && ($_SESSION['logged_user']['code'] == $makara_code) ) {
+			require_once "p/hide_panel.php";
+		} else {
+			require_once "p/panel.php";
+		}?>
+
+		<div class="wrap">
+			<div class="sections">
+				<a href="#">
+					<div class="section" id="ssks"></div>
+					<div class="section-name"><p>совет самоуправления курсантов и студентов</p></div>
+				</a>
+				<a href="#">
+					<div class="section" id="ps"></div>
+					<div class="section-name"><p>профсоюз</p></div>
+				</a>
+				<a href="#">
+					<div class="section" id="mv"></div>
+					<div class="section-name"><p>морские волки</p></div>
+				</a>
+				<a href="sdk.php">
+					<div class="section" id="sdk"></div>
+					<div class="section-name"><p>sdk</p></div>
+				</a>
+				<a href="#">
+					<div class="section" id="ko"></div>
+					<div class="section-name"><p>компас</p></div>
+				</a>
+				<a href="#">
+					<div class="section" id="ap"></div>
+					<div class="section-name"><p>ассоциация покров</p></div>
+				</a>
+				<a href="#">
+					<div class="section" id="pv"></div>
+					<div class="section-name"><p>волонтерское движение "попутный ветер"</p></div>
+				</a> 
+			</div>
+		</div>
+		
+
+	</div>
+
+</body>
+</html>

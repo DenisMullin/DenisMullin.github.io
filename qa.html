@@ -1,0 +1,103 @@
+<?php
+session_start();
+require_once "vendor/connect.php";
+include_once "vendor/code_check.php";
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<?php require_once "p/head.php"; ?>
+</head>
+<body>
+
+	<?php require_once "p/header.php"; ?>
+
+	<div class="main">
+	<?php 
+		if( ($_SESSION['logged_user']['code'] != '') && ($_SESSION['logged_user']['code'] == $makara_code) ) {
+			require_once "p/hide_panel.php";
+		} else {
+			require_once "p/panel.php";
+		}
+	?>
+		<div class="wrap">
+			<?php
+				if (isset($_SESSION['logged_user'])) {
+					require_once "p/new_question.php";
+				} else {
+					echo "<p><a href='login.php'>выполните вход</a> или <a href='signup.php'>зарегистрируйтесь</a>, чтобы оставлять комментарии и ответы</p>";
+				}
+			?>
+
+			<?php $questions = $mysqli->query("SELECT * FROM `questions` ORDER BY `id` DESC"); ?>
+			<?php
+				if (mysqli_fetch_assoc($questions)) {
+					foreach ($questions as $qst) {
+						$c_id = $qst["id"];
+						echo
+						'
+						<div class="post">
+							<div class="content">
+								<p class="sh-text">'.$qst["q-text"].'</p>
+								<div class="sh">
+									<p class="sh-name">'.$qst["q-name"].'</p>
+									';
+									if ($qst["q-vk"] != "not_added") {
+										echo '<a href="https://vk.com/'.$qst["q-vk"].'" class="sh-vk"></a>';
+									}
+									if ($_SESSION['logged_user']) echo '<p class="answer-button" onclick="showAnswerForm('.$c_id.')">ответить</p>';
+						
+						echo
+						'
+						</div>
+						</div>
+						';
+						if ($_SESSION['logged_user']) {
+							echo
+							'<div class="content-answer-form" id="'.$c_id.'" hidden>
+								<form action="vendor/new_answer.php" method="post">
+									<textarea name="answer"></textarea>
+									<input hidden name="c_id" value="'.$c_id.'">
+									<button type="submit">ответить</button>
+								</form>
+							</div>';
+						}
+						$answers = $mysqli->query("SELECT * FROM `answers` WHERE `comment-id` = $c_id");
+						$lim = false;
+						if (mysqli_num_rows($answers) == 0) echo '</div>';
+						if (mysqli_num_rows($answers) > 3) $lim = true;
+						$count = 0;
+						foreach ($answers as $ans) {
+							echo
+							'
+							<div class="content-answer">
+								<p class="content-answer-text">'.$ans["a-text"].'</p>
+								<p>'.$ans["a-name"].'</p>
+							</div>
+							';
+							$count++;
+							if ( ($count == 3) && ($lim) ) {
+								echo '<div class="content-answer-btn"><a href="/question.php?id='.$c_id.'">посмотреть все ответы</a></div>';
+								break;
+							}
+						}
+						if (mysqli_num_rows($answers) > 0) {
+							echo '</div>';
+						}
+					}
+				} else {
+					echo "<p>нет записей</p>";
+				}
+				
+
+			?>
+
+			<script type="text/javascript" src="js/script.js"></script>
+
+		</div>
+	</div>
+
+</body>
+</html>

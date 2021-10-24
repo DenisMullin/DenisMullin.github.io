@@ -1,0 +1,64 @@
+<?php 
+session_start(); 
+include_once "vendor/code_check.php";
+if (isset($_SESSION['logged_user']) == false) {
+	header("Location: /");
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<?php require_once "p/head.php"; ?>
+<body>
+
+	<?php require_once "p/header.php" ?>
+
+	<div class="main">
+	<?php if( ($_SESSION['logged_user']['code'] != '') && ($_SESSION['logged_user']['code'] == $makara_code) ) {
+		require_once "p/hide_panel.php";
+	} else {
+		require_once "p/panel.php";
+	}?>
+		<div class="wrap">
+			<h2>Личный кабинет</h2>
+			<p>Логин: <?php echo $_SESSION['logged_user']['user_login'] ?> </p>
+			<p>Имя: <?php echo $_SESSION['logged_user']['user_name'] ?></p>
+
+			<?php require_once "p/aform.php"; ?>
+			
+			<br>
+			
+			<h2>Изменить пароль</h2>
+			<form action="vendor/pass-change.php" method="post">
+				<p>Старый пароль: <input type="password" name="old-pass"></p>
+				<?php
+				if (isset($_SESSION['new-password-error']))
+				{
+					echo "<p>".$_SESSION['new-password-error']."</p>";
+					unset($_SESSION['new-password-error']);
+				}
+				?>
+				<p>Новый пароль: <input type="password" name="new-pass"></p>
+				<p>Новый пароль ещё раз: <input type="password" name="new-pass-v"></p>
+				<?php
+				if (isset($_SESSION['new-password-v-error']))
+				{
+					echo "<p>".$_SESSION['new-password-v-error']."</p>";
+					unset($_SESSION['new-password-v-error']);
+				}
+				?>
+				<button type="action">Изменить</button>
+				<?php
+					if (isset($_SESSION['new-password-s']))
+					{
+						echo "<p>".$_SESSION['new-password-s']."</p>";
+						unset($_SESSION['new-password-s']);
+					}
+				?>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
