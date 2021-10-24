@@ -1,8 +1,8 @@
-function showAnswerForm() {
-	if (document.getElementById().hidden == false) {
-		document.getElementById().hidden = true;
+function showAnswerForm(id) {
+	if (document.getElementById(id).hidden == false) {
+		document.getElementById(id).hidden = true;
 	}
 	else {
-		document.getElementById().hidden = false;
+		document.getElementById(id).hidden = false;
 	}	
 }
