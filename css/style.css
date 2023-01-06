@@ -1,0 +1,39 @@
+body, header, main, footer, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, legend, input, textarea, p, a{
+    margin: 0;
+    padding: 0
+}
+
+*, *:before, *:after {
+    box-sizing: border-box
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        -webkit-animation: none !important;
+        animation: none !important;
+        transition: none !important
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-weight: 400;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none
+}
+
+input, textarea, select {
+    vertical-align: middle
+}
+
+ol, ul {
+    list-style: none
+}
+
+img {
+    border: 0;
+}
