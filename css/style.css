@@ -38,7 +38,7 @@ body {
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     text-size-adjust: none;
-    color: #000;
+    color: rgb(37, 37, 37);
 }
 
 input, textarea, select {
@@ -57,7 +57,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
+/* 
 header {
     width: 100%;
     font-family: 'Montserrat';
@@ -69,22 +69,30 @@ header {
 
 .header-container {
     margin: 0 auto;
-    max-width: 1720px;
+    width: calc(100%-100px);
+    margin: 0 auto;
+    max-width: 1200px;
     height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
+    background-color: #fff;
+    background-color: red;
 }
 
 header img {
     width: 25px;
 }
 
-.header-logo img {
-    height: 100%;
-}
+.header-logo a {
+    display: flex;
+} */
 
+/* .header-logo img {
+    width: 50px;
+} */
+/* 
 .header-nav {
     height: 100%;
     display: flex;
@@ -98,32 +106,59 @@ header img {
     display: flex;
     align-items: center;
 }
+
 .nav-link {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
+.hn-2 ul,
 .hn-1 ul {
-    grid-column-gap: 83px;
     justify-content: space-around;
     flex: 1 1 auto;
     min-width: 0;
+}
+
+.hn-1 ul {
+    grid-column-gap: 83px;
+}
+
+.hn-2 ul {
+    grid-column-gap: 20px;
 }
 
 .nav-link {
     position: relative;
 }
 
+.nav-link:hover {
+
+}
+
+.nav-link:hover:after {
+    background-color: #000;
+    transition: background-color 0.25s ease 0s;
+}
+
 .nav-link:after {
     content: '';
     width: 100%;
     height: 1px;
-    background-color: #000;
+    background-color: #fff;
     position: absolute;
     top: calc(100% - 1px);
-    transition: background-color 250ms ease 0s;
+    transition: background-color 0.25s ease 0s;
 }
+
+main {
+    padding-top: 50px;
+    display: flex;
+}
+
+.main-container {
+    max-width: 1720px;
+} */
 
 /* @media screen and (min-width: 1025px) {
     .t:after {
@@ -137,4 +172,174 @@ header img {
         transition: background-color 250ms ease 0s;
     }
 } */
+/* 
+.rt { 
+    color: rgb(255, 78, 78);
+} */
 
+header {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    font: bold normal normal 15px 'Montserrat';
+    height: 50px;
+}
+
+header li {
+    display: inline;
+}
+
+.header-nav img {
+    width: 20px;
+}
+
+.header-container {
+    position: relative;
+    width: calc(100% - 50px);
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.header-logo, .hn-2 {
+    position: absolute;
+    top: 0;
+}
+
+.header-logo {
+    left: 0;
+}
+
+.hn-2 {
+    right: 0;
+    top: 2px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+a.show-list:hover {
+    color: #666;
+}
+
+.header-logo a {
+    display: flex;
+}
+
+.main-nav {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.hn-1 .main-nav {
+    grid-column-gap: 83px;
+}
+
+.hn-2 .main-nav {
+    grid-column-gap: 20px;
+}
+
+.nav-link {
+    line-height: 50px;
+    display: flex;
+    position: relative;
+}
+
+.nav-link:hover:after {
+    background-color: #000;
+    transition: background-color 0.25s ease 0s;
+}
+
+.nav-link:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: calc(100% - 1px);
+    transition: background-color 0.25s ease 0s;
+}
+
+
+
+
+
+header .full-list {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 20px 0 10vh 0;
+    z-index: 999;
+    color: #fff;
+    background-color: rgb(37, 37, 37);
+    line-height: 30px;
+    /*
+    text-align: center;
+    grid-column-gap: 83px;
+    left: 50%;
+    transform: translate(-50%);
+    */
+}
+
+header .full-list a {
+    display: inline-flex;
+}
+
+.full-list a:hover {
+    color: #999;
+}
+
+header .list-container {
+    display: flex;
+    justify-content: center;
+    grid-column-gap: 83px;
+}
+
+header .list-container ul {
+    /* display: inline-block; */
+}
+
+.sub-list {
+    padding-top: 15px;
+    font-weight: 500;
+}
+
+.full-list .sub-list ul {
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.nav-ver {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+main {
+    padding-top: 100px;
+    width: 100%;
+    font: normal normal normal 16px 'Montserrat';
+}
+
+.main-container {
+    width: calc(100%-50px);
+    max-width: 1300px;
+    margin: 0 auto;
+}
