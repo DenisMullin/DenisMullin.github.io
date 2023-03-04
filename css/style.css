@@ -31,10 +31,27 @@ html, body {
 }
 
 body {
-  font-weight: 400;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   text-size-adjust: none;
+  font: normal normal normal 14px "Montserrat";
+  color: #252525;
+}
+
+li {
+  list-style: none;
+}
+
+.m-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
