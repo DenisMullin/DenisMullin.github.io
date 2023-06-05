@@ -3,47 +3,51 @@
 	<head>
 		<title>wear spb</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-		<link rel="preload" href="css/style.css" as="style">
-		<link rel="stylesheet" href="css/style.css" media="all" fetchpriority="high">
+		<link rel="stylesheet" href="css/style.css">
+		<meta charset="UTF-8">
 	</head>
 	<body>
-		<header class="m-wrapper">
+	<div class="m-container">
+		<header>
 			<div class="header-container">
-				<div class="logo-container">
-					<a class="logo" href="">OXX</a>
+				<a href="/" id="logo">
+					OXX
+				</a>
+				<div class="main-nav">
+					<ul>
+						<li><a href="#">МУЖЧИНАМ</a></li>
+						<li><a href="#">ЖЕНЩИНАМ</a></li>
+						<li><a href="#">БРЕНДЫ</a></li>
+						<li><a href="#">SALE</a></li>
+					</ul>
 				</div>
 				<div class="sub-nav">
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<!--<li><a href="#"><svg class="svg"><use xlink:href="img/icons.svg#heart"></use></svg></a></li>
+						<li><a href="#"><svg class="svg"><use xlink:href="img/icons.svg#heart"></use></svg></a></li>
+						<li><a href="#"><svg class="svg"><use xlink:href="img/icons.svg#heart"></use></svg></a></li>-->
 					</ul>
 				</div>
 			</div>
-			<div class="main-nav">
-				<ul>
-					<li><a class="show-control" href="">МУЖЧИНАМ</a></li>
-					<li><a class="show-control" href="">ЖЕНЩИНАМ</a></li>
-					<li><a class="show-control" href="">БРЕНДЫ</a></li>
-					<li><a class="show-control" href="">SALE</a></li>
-				</ul>
-			</div>
 		</header>
-		<main class="m-wrapper">
-			<div class="main-container">
 
-			</div>
-		</main>
-		<footer class="m-wrapper">
-			<script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>
-			<link type="text/css" href="js/jquery-ui-1.13.2/jquery-ui.min.css" rel="stylesheet"/>
-			<script type="text/javascript" src="js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
-			<script type="text/javascript" src="js/script.js"></script>
+		<body>
+		<div style="color: red">
+			<svg class="svg"><use xlink:href="img/icons.svg#cancel"></use></svg>
+			<svg class="svg"><use xlink:href="/img/icons.svg#heart"></use></svg>
+			<svg class="svg"><use xlink:href="img/icons.svg#search"></use></svg>
+			<svg class="svg"><use xlink:href="img/icons.svg#user"></use></svg>
+			<svg class="svg"><use xlink:href="/img/icons.svg#user"></use></svg>
+		</div>
+		</body>
+
+		<footer>
+
 		</footer>
+	</div>
 
 		<script>
-			document.addEventListener('DOMContentLoaded', () => {
+			/*document.addEventListener('DOMContentLoaded', () => {
 				let ar = [];
 				for (let i = 0; i < 100; i++) {
 					var p = document.createElement('p');
@@ -53,7 +57,7 @@
 				ar.forEach(e => {
 					document.querySelector('.main-container').append(e);
 				});
-			});
+			});*/
 		</script>
 
 	</body>
