@@ -9,6 +9,7 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,legend,input,textarea,p {
     margin: 0;
     padding: 0;
+    color: #252525;
 }
 
 img {
@@ -48,8 +49,9 @@ body {
 }
 
 #logo {
-    font-weight: 600;
+    /*font-weight: 600;
     font-size: 40px;
+    line-height: 70px;*/
 }
 
 header {
@@ -59,13 +61,48 @@ header {
     max-width: 1700px;
     margin: 0 auto;
     height: 70px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 100%;
+}
+
+.main-nav a {
+    display: block;
+    line-height: 70px;
 }
 
 .main-nav ul {
     display: flex;
     flex-direction: row;
+    grid-column-gap: 95px;
+    font-size: 20px;
+}
+
+.sub-nav ul {
+    display: flex;
+    grid-column-gap: 50px;
 }
 
 .svg {
-    fill: currentColor;
+    width: 30px;
+    height: 30px;
+}
+
+#logo-svg {
+    height: 70px;
+    width: 68px;
+}
+
+.banner {
+    height: 50px;
+    width: 100%;
+    background-color: red;
 }
