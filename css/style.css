@@ -6,10 +6,25 @@
     src: url("../fonts/montserrat/static/Montserrat-SemiBold.ttf") format("ttf");
 }
 
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,legend,input,textarea,p {
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,legend,input,textarea,p,a {
     margin: 0;
     padding: 0;
+}
+
+.color-main {
     color: #252525;
+}
+
+.color-main li a {
+    color: #252525;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.color-white li a {
+    color: #fff;
 }
 
 img {
@@ -29,7 +44,6 @@ a * {
     outline: none;
 }
 a {
-    color: inherit;
     text-decoration: none;
     outline: none;
 }
@@ -46,12 +60,6 @@ input,textarea,select {
 
 body {
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-}
-
-#logo {
-    /*font-weight: 600;
-    font-size: 40px;
-    line-height: 70px;*/
 }
 
 header {
@@ -83,7 +91,7 @@ header {
     display: flex;
     flex-direction: row;
     grid-column-gap: 95px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .sub-nav ul {
@@ -101,8 +109,45 @@ header {
     width: 68px;
 }
 
+.list-svg {
+    width: 40px;
+    height: 70px;
+}
+
 .banner {
     height: 50px;
     width: 100%;
     background-color: red;
+}
+
+.list-container {
+    width: 100%;
+    background-color: #252525;
+    color: #fff;
+    padding: 50px 0 80px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.list-template {
+    display: flex;
+    grid-column-gap: 150px;
+}
+
+.list-template p {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.list-items li {
+    margin-bottom: 22px;
+}
+
+.list-items {
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
 }
