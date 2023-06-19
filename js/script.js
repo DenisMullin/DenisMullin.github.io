@@ -15,11 +15,13 @@ function openListHoverEvent () {
             $(e).addClass('button-select');
         })
         $(e).on('mouseleave', (event) => {
+            $(e).toggleClass('button-select');
+            if (!id) return;
             let n = event.relatedTarget;
             if ($(n).data('list-id') !== id) {
                 l.addClass('hidden');
-                $(e).removeClass('button-select');
             } else {
+                $(e).addClass('button-select');
                 $(n).on('mouseleave', (ev) => {
                     if ($(ev.relatedTarget).data('list-id') !== id) {
                         $(n).addClass('hidden');
