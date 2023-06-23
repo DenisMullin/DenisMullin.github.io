@@ -11,6 +11,10 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,legend,input,textarea,p,a 
     padding: 0;
 }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 .color-main {
     color: #252525;
 }
@@ -54,6 +58,10 @@ a:focus {
     text-decoration: none;
 }
 
+.inline {
+    display: inline;
+}
+
 input,textarea,select {
     vertical-align: middle
 }
@@ -66,7 +74,7 @@ header {
     width: 100vw;
 }
 .header-container {
-    max-width: 1700px;
+    max-width: 1366px;
     margin: 0 auto;
     height: 70px;
     position: relative;
@@ -95,11 +103,14 @@ header {
 .main-nav ul {
     display: flex;
     flex-direction: row;
-    font-size: 25px;
+}
+
+.main-nav a {
+    padding: 0 10px;
 }
 
 .main-nav ul li {
-    padding: 0 47px;
+    padding: 0 27px;
 }
 
 .button-select a {
@@ -119,7 +130,11 @@ header {
 
 .sub-nav ul {
     display: flex;
-    grid-column-gap: 50px;
+    grid-column-gap: 30px;
+}
+
+.sub-nav a {
+    padding: 0 10px;
 }
 
 .svg {
@@ -145,13 +160,34 @@ header {
 }
 
 .list-container {
+    z-index: 999999;
     width: 100%;
     background-color: #252525;
-    color: #fff;
     padding: 50px 0 80px 0;
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+
+.row-display {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+}
+
+.column-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h-center {
+    align-items: center;
+}
+
+.a-left {
+    align-items: flex-start;
 }
 
 .list-template {
@@ -178,4 +214,155 @@ header {
 
 .height-100 {
     height: 100%;
+}
+
+#cap {
+    height: calc(100% - 70px);
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(100, 100, 100, 0.5);
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+
+.search-line {
+    display: flex;
+    width: 800px;
+    border-bottom: 1px solid #fff;
+    height: 50px;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+#select-categories-container {
+    position: absolute;
+    display: flex;
+    right: 0;
+}
+
+#search {
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    flex: 1 0 auto;
+    padding: 0 0 0 10px;
+}
+
+#search:focus-visible {
+    outline: 0;
+}
+
+#select-categories {
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+label[for=search] {
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+#v-devider {
+    height: 25px;
+    width: 1px;
+    background-color: #fff;
+}
+
+.size-25 {
+    font-size: 25px;
+}
+
+.size-20 {
+    font-size: 20px;
+}
+
+.search-result {
+    width: 800px;
+}
+
+.search-element {
+    margin: 10px 0;
+    width: 100%;
+    height: 100px;
+}
+
+.search-element__name {
+    flex: 1 0 auto;
+    padding-left: 20px;
+}
+
+.selected-categories-container {
+    width: 100%;
+    padding: 20px 0 10px 0;
+}
+
+.search-result__container {
+    width: 100%;
+}
+
+div[data-list-id=search] {
+    /*width: 800px;*/
+    min-width: 0;
+}
+
+.search-container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.select-categories__container {
+    width: 800px;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-wrapper .swiper-slide {
+    display: flex;
+    width: 100%;
+}
+
+.select-radio {
+    display: flex;
+    align-items: center;
+    height: 2em;
+    margin: 0 5px;
+    padding: 0 5px;
+}
+
+.radio-button {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.radio-button+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.radio-button+label::before {
+    content: '';
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*background-size: 50% 50%;*/
+}
+
+.radio-button:checked+label::before {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3e%3ccircle fill='%23fff' cx='9' cy='9' r='7'/%3e%3c/svg%3e");
 }

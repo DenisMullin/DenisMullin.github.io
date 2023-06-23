@@ -3,6 +3,7 @@
 	<head>
 		<title>wear spb</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<meta charset="UTF-8">
 	</head>
@@ -12,128 +13,247 @@
 			<div class="header-container">
 				<a href="/" id="logo"><svg id="logo-svg"><use xlink:href="img/icons.svg#logo"></use></svg></a>
 				<div class="main-nav height-100">
-					<ul class="color-main">
+					<ul class="color-main size-25">
 						<li class="open-list" data-list-id="men"><a href="#">МУЖЧИНАМ</a></li>
 						<li class="open-list" data-list-id="women"><a href="#">ЖЕНЩИНАМ</a></li>
 						<li class="open-list" data-list-id="brands"><a href="#">БРЕНДЫ</a></li>
 						<li class="open-list"><a href="#">SALE</a></li>
 					</ul>
 				</div>
-				<div class="sub-nav height-100">
+				<div class="sub-nav height-100 color-main">
 					<ul>
-						<li><a href="#"><svg class="svg"><use xlink:href="img/icons.svg#search"></use></svg></a></li>
+						<li class="open-block" data-list-id="search"><a href="#"><svg class="svg"><use xlink:href="img/icons.svg#search"></use></svg></a></li>
 						<li><a href="#"><svg class="svg"><use xlink:href="img/icons.svg#cart"></use></svg></a></li>
 						<li><a href="#"><svg class="svg"><use xlink:href="img/icons.svg#user"></use></svg></a></li>
 					</ul>
 				</div>
 			</div>
-			<div data-list-id="men" class="list-container hidden">
-				<ul class="list-template">
-					<li>
-						<p>ОДЕЖДА</p>
-						<ul class="list-items color-white">
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Josh Collins</a></li>
-							<li><a href="#">Filo Franko</a></li>
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Josh Collins</a></li>
-							<li><a href="#">Filo Franko</a></li>
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Josh Collins</a></li>
-							<li><a href="#">Filo Franko</a></li>
-						</ul>
-					</li>
-					<li>
-						<p>КОЛЛЕКЦИИ</p>
-						<ul class="list-items color-white">
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Josh Collins</a></li>
-							<li><a href="#">Filo Franko</a></li>
-						</ul>
-					</li>
-					<li>
-						<p>ОБУВЬ</p>
-						<ul class="list-items color-white">
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Josh Collins</a></li>
-							<li><a href="#">Filo Franko</a></li>
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Josh Collins</a></li>
-							<li><a href="#">Filo Franko</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div data-list-id="women" class="list-container hidden">
-				<ul class="list-template">
-					<li>
-						<p>ОДЕЖДА</p>
-						<ul class="list-items color-white">
-							<li><a href="#">Camo collection</a></li>
-
-						</ul>
-					</li>
-					<li>
-						<p>КОЛЛЕКЦИИ</p>
-						<ul class="list-items color-white">
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Josh Collins</a></li>
-						</ul>
-					</li>
-					<li>
-						<p>ОБУВЬ</p>
-						<ul class="list-items color-white">
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Camo collection</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div data-list-id="brands" class="list-container hidden">
-				<ul class="list-template">
-					<li>
-						<p>ОДЕЖДА</p>
-						<ul class="list-items color-white">
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Camo collection</a></li>
-						</ul>
-					</li>
-					<li>
-						<p>КОЛЛЕКЦИИ</p>
-						<ul class="list-items color-white">
-							<li><a href="#">Josh Collins</a></li>
-							<li><a href="#">Filo Franko</a></li>
-							<li><a href="#">Josh Collins</a></li>
-							<li><a href="#">Filo Franko</a></li>
-							<li><a href="#">Josh Collins</a></li>
-							<li><a href="#">Filo Franko</a></li>
-							<li><a href="#">Josh Collins</a></li>
-							<li><a href="#">Filo Franko</a></li>
-						</ul>
-					</li>
-					<li>
-						<p>ОБУВЬ</p>
-						<ul class="list-items color-white">
-							<li><a href="#">Camo collection</a></li>
-							<li><a href="#">Josh Collins</a></li>
-							<li><a href="#">Filo Franko</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
 		</header>
 
-		<body>
-		</body>
+		<main>
+            <div data-list-id="men" class="list-container color-white hidden row-display">
+                <ul class="list-template">
+                    <li>
+                        <p>ОДЕЖДА</p>
+                        <ul class="list-items color-white">
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Josh Collins</a></li>
+                            <li><a href="#">Filo Franko</a></li>
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Josh Collins</a></li>
+                            <li><a href="#">Filo Franko</a></li>
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Josh Collins</a></li>
+                            <li><a href="#">Filo Franko</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>КОЛЛЕКЦИИ</p>
+                        <ul class="list-items color-white">
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Josh Collins</a></li>
+                            <li><a href="#">Filo Franko</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>ОБУВЬ</p>
+                        <ul class="list-items color-white">
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Josh Collins</a></li>
+                            <li><a href="#">Filo Franko</a></li>
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Josh Collins</a></li>
+                            <li><a href="#">Filo Franko</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div data-list-id="women" class="list-container color-white hidden row-display">
+                <ul class="list-template">
+                    <li>
+                        <p>ОДЕЖДА</p>
+                        <ul class="list-items color-white">
+                            <li><a href="#">Camo collection</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <p>КОЛЛЕКЦИИ</p>
+                        <ul class="list-items color-white">
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Josh Collins</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>ОБУВЬ</p>
+                        <ul class="list-items color-white">
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Camo collection</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div data-list-id="brands" class="list-container color-white hidden row-display">
+                <ul class="list-template">
+                    <li>
+                        <p>ОДЕЖДА</p>
+                        <ul class="list-items color-white">
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Camo collection</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>КОЛЛЕКЦИИ</p>
+                        <ul class="list-items color-white">
+                            <li><a href="#">Josh Collins</a></li>
+                            <li><a href="#">Filo Franko</a></li>
+                            <li><a href="#">Josh Collins</a></li>
+                            <li><a href="#">Filo Franko</a></li>
+                            <li><a href="#">Josh Collins</a></li>
+                            <li><a href="#">Filo Franko</a></li>
+                            <li><a href="#">Josh Collins</a></li>
+                            <li><a href="#">Filo Franko</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>ОБУВЬ</p>
+                        <ul class="list-items color-white">
+                            <li><a href="#">Camo collection</a></li>
+                            <li><a href="#">Josh Collins</a></li>
+                            <li><a href="#">Filo Franko</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div data-list-id="search" class="list-container color-white hidden">
+                <div class="search-line">
+                    <label for="search">
+                        <svg class="svg"><use xlink:href="img/icons.svg#search"></use></svg>
+                    </label>
+                    <input type="text" id="search" class="size-20">
+                    <div id="select-categories-container">
+                        <span id="v-devider"></span>
+                        <button id="select-categories">Выбрать раздел</button>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <div class="selected-categories-container">
+                        <p class="selected-categories__text inline">Выбранная категория: </p>
+                        <p id="selected-categories" class="inline">Все разделы</p>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="search-result column-display a-left size-20" id="">
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-1">
+                                        <label for="radio-1">Мужчинам</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-2">
+                                        <label for="radio-2">Женщинам</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-3">
+                                        <label for="radio-3">Унисекс</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-4">
+                                        <label for="radio-4">Кеды</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-5">
+                                        <label for="radio-5">Кроссовки</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-6">
+                                        <label for="radio-6">Мужчинам</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-7">
+                                        <label for="radio-7">Женщинам</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-8">
+                                        <label for="radio-8">Унисекс</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-9">
+                                        <label for="radio-9">Кеды</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-10">
+                                        <label for="radio-10">Кроссовки</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-11">
+                                        <label for="radio-11">Мужчинам</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-12">
+                                        <label for="radio-12">Женщинам</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-13">
+                                        <label for="radio-13">Унисекс</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-14">
+                                        <label for="radio-14">Кеды</label>
+                                    </div>
+                                    <div class="select-radio">
+                                        <input type="radio" class="radio-button" id="radio-15">
+                                        <label for="radio-15">Кроссовки</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="search-result column-display h-center" id="elements-list">
+                                    <div class="search-result__container column-display h-center">
+                                        <a class="search-element row-display size-20 color-white" href="#">
+                                            <img src="img/nike-air-force.png" alt="nike air force" height="100px" width="100px">
+                                            <div class="search-element__name">
+                                                <p>Nike air force I</p>
+                                            </div>
+                                            <p class="price">$100</p>
+                                        </a>
+                                        <a class="search-element row-display size-20 color-white" href="#">
+                                            <img src="img/nike-air-force.png" alt="nike air force" height="100px" width="100px">
+                                            <div class="search-element__name">
+                                                <p>Nike air force I</p>
+                                            </div>
+                                            <p class="price">$100</p>
+                                        </a>
+                                        <a class="search-element row-display size-20 color-white" href="#">
+                                            <img src="img/nike-air-force.png" alt="nike air force" height="100px" width="100px">
+                                            <div class="search-element__name">
+                                                <p>Nike air force I</p>
+                                            </div>
+                                            <p class="price">$100</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div id="cap" class="hidden"></div>
+            qwe
+            <script>
+                var swiper = new Swiper(".mySwiper", {});
+            </script>
+        </main>
 
 		<footer>
 			<script src="js/jquery-3.7.0.min.js"></script>
 			<script src="js/script.js"></script>
+			<script src="js/swiper-bundle.min.js"></script>
 		</footer>
 	</div>
 
