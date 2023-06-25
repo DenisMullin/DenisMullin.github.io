@@ -190,6 +190,30 @@ header {
     align-items: flex-start;
 }
 
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.arrow-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.arrow-link:after {
+    content: '';
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 14px;
+    width: 14px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath fill='%23fff' d='M28.5 3C28.5 2.17157 27.8284 1.5 27 1.5H13.5C12.6716 1.5 12 2.17157 12 3C12 3.82843 12.6716 4.5 13.5 4.5H25.5V16.5C25.5 17.3284 26.1716 18 27 18C27.8284 18 28.5 17.3284 28.5 16.5V3ZM3.06066 29.0607L28.0607 4.06066L25.9393 1.93934L0.93934 26.9393L3.06066 29.0607Z'/%3e%3c/svg%3e");
+    margin-left: 5px;
+}
+
 .list-template {
     display: flex;
     grid-column-gap: 150px;
@@ -333,8 +357,7 @@ div[data-list-id=search] {
     display: flex;
     align-items: center;
     height: 2em;
-    margin: 0 5px;
-    padding: 0 5px;
+    width: 50%;
 }
 
 .radio-button {
