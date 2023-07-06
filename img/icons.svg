@@ -25,6 +25,7 @@
     <symbol id="radio-dot" viewBox="0 0 18 18">
         <circle cx="9" cy="9" r="7" fill="#fff"/>
     </symbol>
-
-
+    <symbol id="location-mark" viewBox="0 0 30 30">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15 28C15 28 24 15.9706 24 11C24 6.02944 19.9706 2 15 2C10.0294 2 6 6.02944 6 11C6 15.9706 15 28 15 28ZM15 15C17.2091 15 19 13.2091 19 11C19 8.79086 17.2091 7 15 7C12.7909 7 11 8.79086 11 11C11 13.2091 12.7909 15 15 15Z" fill="#252525"/>
+    </symbol>
 </svg>

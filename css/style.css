@@ -71,7 +71,7 @@ body {
 }
 
 header {
-    width: 100vw;
+    width: 100%;
 }
 .header-container {
     max-width: 1366px;
@@ -81,6 +81,30 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.pre-header {
+    color: #000;
+    background-color: #eee;
+    height: 25px;
+    font-size: 15px;
+}
+
+.pre-header_container {
+    display: flex;
+    max-width: 1366px;
+    margin: 0 auto;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pre-header_block {
+    display: flex;
+}
+
+#select_location_btn {
+    cursor: pointer;
 }
 
 .main-nav {
@@ -143,6 +167,11 @@ header {
     display: block;
 }
 
+.pre-header-svg {
+    width: 15px;
+    height: 15px;
+}
+
 #logo-svg {
     height: 70px;
     width: 68px;
@@ -165,7 +194,7 @@ header {
     background-color: #252525;
     padding: 50px 0 80px 0;
     position: absolute;
-    top: 70px;
+    top: 95px;
     left: 0;
 }
 
@@ -246,7 +275,7 @@ header {
     z-index: 999;
     background-color: rgba(100, 100, 100, 0.5);
     position: absolute;
-    top: 70px;
+    top: 95px;
     left: 0;
 }
 
