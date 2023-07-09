@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     openListClickEvent();
     capClick();
 
+    /*$('input[name=selectedSection]').on('change', () => {
+        console.log('section changed');
+        console.log($('input[name=selectedSection]').val());
+    })
+
     const swiper = new Swiper('.swiper', {
         initialSlide: 2,
         speed: 500,
@@ -22,10 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             swiper.slideNext();
         }
-    });
+    });*/
 
     $('label[for=search]').on('click', () => {
 
+    });
+
+    $('.cancel-search').on('click', () => {
+        $('#search').val('');
+        $('#search').focus();
+    })
+
+    $('#search').on('input', function () {
+        if ($(this).val().length) {
+            $('.cancel-search').removeClass('hidden');
+        } else {
+            $('.cancel-search').addClass('hidden');
+        }
     });
 
 });

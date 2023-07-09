@@ -11,11 +11,10 @@
 	<div class="m-container">
         <div class="pre-header">
             <div class="pre-header_container">
-                <div class="pre-header_block" id="select_location_btn">
-                    <svg class="pre-header-svg"><use xlink:href="img/icons.svg#location-mark"></use></svg> Санкт-Петербург
-                </div>
                 <div class="pre-header_block">
                     <a href="#" class="color-main">Доставка</a>
+                    <a href="#" class="color-main">О нас</a>
+                    <a href="#" class="color-main">Авторизация</a>
                 </div>
             </div>
         </div>
@@ -34,7 +33,6 @@
 					<ul>
 						<li class="open-block" data-list-id="search"><a href="#"><svg class="svg"><use xlink:href="img/icons.svg#search"></use></svg></a></li>
 						<li><a href="#"><svg class="svg"><use xlink:href="img/icons.svg#cart"></use></svg></a></li>
-						<li><a href="#"><svg class="svg"><use xlink:href="img/icons.svg#user"></use></svg></a></li>
 					</ul>
 				</div>
 			</div>
@@ -146,123 +144,62 @@
                         <svg class="svg"><use xlink:href="img/icons.svg#search"></use></svg>
                     </label>
                     <input type="text" id="search" class="size-20">
-                    <div id="select-categories-container">
+                    <!--<div id="select-categories-container">
                         <span id="v-devider"></span>
                         <button id="select-categories">Выбрать раздел</button>
-                    </div>
+                    </div>-->
+                    <span class="cancel-search hidden"><svg class="svg color-white"><use xlink:href="img/icons.svg#cancel"></use></svg></span>
                 </div>
                 <div class="search-container">
-                    <div class="selected-categories-container">
-                        <p class="selected-categories__text inline">Выбранная категория: </p>
-                        <p id="selected-categories" class="inline">Все разделы</p>
-                    </div>
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="search-result d-flex f-wrap size-20" id="">
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-1">
-                                        <label for="radio-1">Мужчинам</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-2">
-                                        <label for="radio-2">Женщинам</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-3">
-                                        <label for="radio-3">Унисекс</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-4">
-                                        <label for="radio-4">Кеды</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-5">
-                                        <label for="radio-5">Кроссовки</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-6">
-                                        <label for="radio-6">Мужчинам</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-7">
-                                        <label for="radio-7">Женщинам</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-8">
-                                        <label for="radio-8">Унисекс</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-9">
-                                        <label for="radio-9">Кеды</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-10">
-                                        <label for="radio-10">Кроссовки</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-11">
-                                        <label for="radio-11">Мужчинам</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-12">
-                                        <label for="radio-12">Женщинам</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-13">
-                                        <label for="radio-13">Унисекс</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-14">
-                                        <label for="radio-14">Кеды</label>
-                                    </div>
-                                    <div class="select-radio">
-                                        <input type="radio" class="radio-button" id="radio-15">
-                                        <label for="radio-15">Кроссовки</label>
-                                    </div>
-                                </div>
+                    <div class="search-result column-display h-center" id="elements-list">
+                        <div class="suggestions">
+                            <div class="suggestions_title">
+                                <p>Возможно вы ищете: </p>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="search-result column-display h-center" id="elements-list">
-                                    <div class="search-result__container column-display h-center">
-                                        <a class="search-element row-display size-20 color-white" href="#">
-                                            <img src="img/nike-air-force.png" alt="nike air force" height="100px" width="100px">
-                                            <div class="search-element__name">
-                                                <p>Nike air force I</p>
-                                            </div>
-                                            <p class="price">$100</p>
-                                        </a>
-                                        <a class="search-element row-display size-20 color-white" href="#">
-                                            <img src="img/nike-air-force.png" alt="nike air force" height="100px" width="100px">
-                                            <div class="search-element__name">
-                                                <p>Nike air force I</p>
-                                            </div>
-                                            <p class="price">$100</p>
-                                        </a>
-                                        <a class="search-element row-display size-20 color-white" href="#">
-                                            <img src="img/nike-air-force.png" alt="nike air force" height="100px" width="100px">
-                                            <div class="search-element__name">
-                                                <p>Nike air force I</p>
-                                            </div>
-                                            <p class="price">$100</p>
-                                        </a>
-                                    </div>
-                                    <div class="selected-categories-container">
-                                        <a id="show-all" class="inline color-white arrow-link" href="#">Все результаты поиска</a>
-                                    </div>
-                                </div>
+                            <div class="suggestions_elements">
+                                <a href="#" class="suggestions_element color-main">Air force I</a>
+                                <a href="#" class="suggestions_element color-main">Air force I</a>
+                                <a href="#" class="suggestions_element color-main">Air force I</a>
+                                <a href="#" class="suggestions_element color-main">Air force I</a>
+                                <a href="#" class="suggestions_element color-main">Air force I</a>
+                                <a href="#" class="suggestions_element color-main">Air force I</a>
+                                <a href="#" class="suggestions_element color-main">Air force I</a>
+                                <a href="#" class="suggestions_element color-main">Air force I</a>
                             </div>
+                        </div>
+                        <div class="search-result__container column-display h-center">
+                            <a class="search-element row-display size-20 color-white" href="#">
+                                <img src="img/nike-air-force.png" alt="nike air force" height="100px" width="100px">
+                                <div class="search-element__name">
+                                    <p>Nike air force I</p>
+                                </div>
+                                <p class="price">$100</p>
+                            </a>
+                            <a class="search-element row-display size-20 color-white" href="#">
+                                <img src="img/nike-air-force.png" alt="nike air force" height="100px" width="100px">
+                                <div class="search-element__name">
+                                    <p>Nike air force I</p>
+                                </div>
+                                <p class="price">$100</p>
+                            </a>
+                            <a class="search-element row-display size-20 color-white" href="#">
+                                <img src="img/nike-air-force.png" alt="nike air force" height="100px" width="100px">
+                                <div class="search-element__name">
+                                    <p>Nike air force I</p>
+                                </div>
+                                <p class="price">$100</p>
+                            </a>
+                        </div>
+                        <div class="selected-categories-container">
+                            <a id="show-all" class="inline color-white arrow-link" href="#">Все результаты поиска</a>
                         </div>
                     </div>
                 </div>
             </div>
 			<div id="cap" class="hidden"></div>
-            <p>content</p>
 
 
-            <script>
-                var swiper = new Swiper(".mySwiper", {});
-            </script>
+
         </main>
 
 		<footer>
