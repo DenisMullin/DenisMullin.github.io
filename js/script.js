@@ -54,15 +54,21 @@ function openListHoverEvent () {
     $('.open-list').each((i, e) => {
         let id = $(e).data('list-id');
         let l = $(`div[data-list-id=${id}]`);
+        let t;
+        let tOut;
         $(e).on('mouseenter', () => {
-            if ($('body').hasClass('block-opened')) return;
-            if (l.length) {
-                l.removeClass('hidden');
-                $('#cap').removeClass('hidden');
-            }
-            $(e).addClass('button-select');
+            t = setTimeout(() => {
+                if ($('body').hasClass('block-opened')) return;
+                if (l.length) {
+                    l.removeClass('hidden');
+                    $('#cap').removeClass('hidden');
+                }
+                $(e).addClass('button-select');
+                $('body').addClass('tab-opened');
+            }, 300);
         })
         $(e).on('mouseleave', (event) => {
+            clearTimeout(t);
             if ($('body').hasClass('block-opened')) return;
             $(e).removeClass('button-select');
             if (!id) return;
@@ -70,8 +76,10 @@ function openListHoverEvent () {
             if ($(n).data('list-id') !== id) {
                 l.addClass('hidden');
                 $('#cap').addClass('hidden');
+                $('body').removeClass('tab-opened');
             } else {
                 $(e).addClass('button-select');
+                $('body').addClass('tab-opened');
                 $(n).on('mouseleave', (ev) => {
                     if ($(ev.relatedTarget).data('list-id') !== id) {
                         $(n).addClass('hidden');
