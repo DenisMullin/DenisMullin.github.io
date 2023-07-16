@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.cancel-search').on('click', () => {
         $('#search').val('');
         $('#search').focus();
+        $('.cancel-search').addClass('hidden')
     })
 
     $('#search').on('input', function () {
@@ -113,7 +114,6 @@ function openListClickEvent () {
                         .attr('data-list-id', id);
                     $('#cap').removeClass('hidden');
                     let w = $('#select-categories-container').width();
-                    console.log(w);
                     $('#search').css('padding-right', w+10)
                 }
             }
