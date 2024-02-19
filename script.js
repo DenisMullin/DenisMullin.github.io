@@ -60,5 +60,7 @@ document.querySelector('#showInitData').addEventListener('click', () => {
     let block = document.querySelector('#initData');
     if (!block.classList.contains('hidden')) {
         block.classList.add('hidden');   
+    } else {
+        block.classList.remove('hidden');
     }
 });
