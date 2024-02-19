@@ -65,4 +65,5 @@ document.querySelector('#showInitData').addEventListener('click', () => {
     }
 });
 
+app.BackButton.show();
 app.MainButton.show();
