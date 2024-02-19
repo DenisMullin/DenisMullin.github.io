@@ -3,10 +3,13 @@
     padding: 0;
 }
 
+html {
+    background-color: var(--tg-theme-bg-color);
+}
+
 main {
     width: 100vw;
     height: 100vh;
-    background-color: var(--tg-theme-bg-color);
 }
 
 h1,
@@ -17,6 +20,7 @@ h5,
 h6,
 p,
 span,
+pre,
 input {
     color: var(--tg-theme-text-color);    
 }
@@ -37,4 +41,8 @@ button {
 
 .hidden {
     display: none;
+}
+
+.block {
+    margin: 20px 0;
 }
