@@ -2,3 +2,7 @@ body {
     max-width: 558px;
     word-wrap: break-word;
 }
+
+.title {
+    color: #555;
+}
