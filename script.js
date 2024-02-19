@@ -64,3 +64,5 @@ document.querySelector('#showInitData').addEventListener('click', () => {
         block.classList.remove('hidden');
     }
 });
+
+app.MainButton.show();
