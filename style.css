@@ -35,6 +35,6 @@ button {
     color: var(--tg-theme-hint-color);
 }
 
-#initData {
+.hidden {
     display: none;
 }
