@@ -38,5 +38,26 @@ button {
 }
 
 .block {
-    margin: 20px 0;
+    margin: 20px 10px;
+}
+
+.flex {
+    display: flex;
+}
+
+.svg-button {
+    padding: 5px;
+}
+
+.f-v-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between
+}
+
+.center-block {
+    margin-left: 50%;
+    transform: translateX(-50%);
 }

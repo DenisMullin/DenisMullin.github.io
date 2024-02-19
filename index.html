@@ -10,22 +10,44 @@
     </head>
     <body>
         <main>
-            <button id="showInitData">Показать данные</button>
-            <div id="initData" class="hidden block">
-                <p class="title">window.Telegram.WebApp.initData</p>
-                <pre id="pre_1"></pre>
-                <p class="title">window.Telegram.WebApp.initDataUnsafe</p>
-                <pre id="pre_2"></pre>
-                <p class="title">window.Telegram.WebApp.platform</p>
-                <pre id="pre_3"></pre>
-                <p class="title">window.Telegram.WebApp.version</p>
-                <pre id="pre_4"></pre>
-                <p class="title">window.Telegram.WebApp.viewportHeight</p>
-                <pre id="pre_5"></pre>
-                <p class="title">window.Telegram.WebApp.viewportStableHeight</p>
-                <pre id="pre_6"></pre>
+            <div id="top-panel" class="flex justify-between">
+                <button class="svg-button flex f-v-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5282 17.1913C10.9181 17.5825 11.5513 17.5834 11.9424 17.1934C12.3335 16.8035 12.3345 16.1703 11.9445 15.7792L9.56936 13.397L18.1551 13.4098C18.7074 13.4106 19.1558 12.9635 19.1566 12.4112C19.1574 11.859 18.7104 11.4106 18.1581 11.4098L9.25859 11.3966L11.955 8.70816C12.3461 8.31822 12.347 7.68505 11.9571 7.29395C11.5671 6.90285 10.934 6.90191 10.5429 7.29186L6.29394 11.5282C5.90284 11.9182 5.90191 12.5513 6.29185 12.9424C6.29185 12.9424 6.29184 12.9424 6.29185 12.9424L10.5282 17.1913Z" fill="currentColor"/>
+                    </svg>
+                    <span>Назад</span>                        
+                </button>
+                <button class="svg-button" id="expand">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_17_24)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 8C22.4477 8 22 7.55228 22 7V3.19238L15.7071 9.48527C15.3166 9.8758 14.6834 9.8758 14.2929 9.48527C13.9024 9.09475 13.9024 8.46159 14.2929 8.07106L20.364 2H17C16.4477 2 16 1.55228 16 1C16 0.447715 16.4477 0 17 0H23C23.5523 0 24 0.447715 24 1V7C24 7.55228 23.5523 8 23 8Z" fill="currentColor"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1 15.7782C1.55229 15.7782 2 16.2259 2 16.7782L2 20.5858L8.29289 14.2929C8.68342 13.9024 9.31658 13.9024 9.70711 14.2929C10.0976 14.6834 10.0976 15.3166 9.70711 15.7071L3.63605 21.7782H7C7.55228 21.7782 8 22.2259 8 22.7782C8 23.3305 7.55228 23.7782 7 23.7782H1C0.447715 23.7782 1.86265e-09 23.3305 1.86265e-09 22.7782V16.7782C1.86265e-09 16.2259 0.447715 15.7782 1 15.7782Z" fill="currentColor"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_17_24">
+                                <rect width="24" height="24" fill="none"/>
+                            </clipPath>
+                        </defs>
+                    </svg>                    
+                </button>
             </div>
-            <button id="expand">Развернуть / Свернуть</button>
+            <div id="main-body">
+                <button id="showInitData" class="center-block">show data</button>
+                <div id="initData" class="hidden block">
+                    <p class="title">window.Telegram.WebApp.initData</p>
+                    <pre id="pre_1"></pre>
+                    <p class="title">window.Telegram.WebApp.initDataUnsafe</p>
+                    <pre id="pre_2"></pre>
+                    <p class="title">window.Telegram.WebApp.platform</p>
+                    <pre id="pre_3"></pre>
+                    <p class="title">window.Telegram.WebApp.version</p>
+                    <pre id="pre_4"></pre>
+                    <p class="title">window.Telegram.WebApp.viewportHeight</p>
+                    <pre id="pre_5"></pre>
+                    <p class="title">window.Telegram.WebApp.viewportStableHeight</p>
+                    <pre id="pre_6"></pre>
+                </div>
+            </div>
         </main>
 
         <script src="script.js"></script>
