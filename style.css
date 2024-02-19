@@ -7,22 +7,13 @@ html {
     background-color: var(--tg-theme-bg-color);
 }
 
+body {
+    color: var(--tg-theme-text-color); 
+}
+
 main {
     width: 100vw;
     height: 100vh;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-pre,
-input {
-    color: var(--tg-theme-text-color);    
 }
 
 a {
