@@ -1,8 +1,40 @@
-body {
-    max-width: 558px;
-    word-wrap: break-word;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.title {
-    color: #555;
+main {
+    width: 100%;
+    height: 100%;
+    background-color: var(--tg-theme-bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+input {
+    color: var(--tg-theme-text-color);    
+}
+
+a {
+    color: var(--tg-theme-link-color);
+}
+
+button {
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    padding: 10px 20px;
+}
+
+.hint {
+    color: var(--tg-theme-hint-color);
+}
+
+#initData {
+    display: none;
 }

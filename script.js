@@ -42,10 +42,17 @@ function parseType(val) {
 }
 
 const app = window.Telegram.WebApp;
-document.querySelector('#wh').innerHTML = `w: ${window.innerWidth}, h: ${window.innerHeight}`;
-document.querySelector('#pre_1').innerHTML = app.initData;
-document.querySelector('#pre_2').innerHTML = (typeof app.initDataUnsafe === 'object') ? printObj(app.initDataUnsafe) : app.initDataUnsafe;
-document.querySelector('#pre_3').innerHTML = app.platform;
-document.querySelector('#pre_4').innerHTML = app.version;
-document.querySelector('#pre_5').innerHTML = app.viewportHeight;
-document.querySelector('#pre_6').innerHTML = app.viewportStableHeight;
+
+app.ready(() => {
+    document.querySelector('#pre_1').innerHTML = app.initData;
+    document.querySelector('#pre_2').innerHTML = (typeof app.initDataUnsafe === 'object') ? printObj(app.initDataUnsafe) : app.initDataUnsafe;
+    document.querySelector('#pre_3').innerHTML = app.platform;
+    document.querySelector('#pre_4').innerHTML = app.version;
+    document.querySelector('#pre_5').innerHTML = app.viewportHeight;
+    document.querySelector('#pre_6').innerHTML = app.viewportStableHeight;
+
+
+    document.querySelector('#expand').addEventListener('click', () => {
+        app.expand();
+    })
+});
