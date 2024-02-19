@@ -49,3 +49,5 @@ document.querySelector('#pre_4').innerHTML = app.version;
 document.querySelector('#pre_5').innerHTML = app.viewportHeight;
 document.querySelector('#pre_6').innerHTML = app.viewportStableHeight;
 document.querySelector('#pre_7').innerHTML = app.WebAppUser.username;
+
+document.querySelector('#wh').innerHTML = `w: ${window.innerWidth}, h: ${window.innerHeight}`;
