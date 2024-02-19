@@ -10,40 +10,48 @@
     </head>
     <body>
         
-        <p>window.Telegram.WebApp.initData</p>
+        <p class="title">window.Telegram.WebApp.initData</p>
         <pre id="pre_1"></pre>
-        <p>window.Telegram.WebApp.initDataUnsafe</p>
+        <p class="title">window.Telegram.WebApp.initDataUnsafe</p>
         <pre id="pre_2"></pre>
-        <p>window.Telegram.WebApp.platform</p>
+        <p class="title">window.Telegram.WebApp.platform</p>
         <pre id="pre_3"></pre>
-        <p>window.Telegram.WebApp.version</p>
+        <p class="title">window.Telegram.WebApp.version</p>
         <pre id="pre_4"></pre>
-        <p>window.Telegram.WebApp.viewportHeight</p>
+        <p class="title">window.Telegram.WebApp.viewportHeight</p>
         <pre id="pre_5"></pre>
-        <p>window.Telegram.WebApp.viewportStableHeight</p>
+        <p class="title">window.Telegram.WebApp.viewportStableHeight</p>
         <pre id="pre_6"></pre>
-        <p>window.Telegram.WebApp.WebAppUser.username</p>
+        <p class="title">window.Telegram.WebApp.WebAppUser.username</p>
         <pre id="pre_7"></pre>
 
         <script>
 
-            function printObj(obj, level = -1) {
-                level += 1;
-                let oneSpace = '    ';
-                let space = oneSpace.repeat(level);
-                let res = `\n${space}{\n`;
-                for (const [key, value] of Object.entries(obj)) {
-                    if (typeof value === 'object' && !Array.isArray(value)) {
-                        res += `${oneSpace}${space}${key}: ${printObj(value, level)}`;
-                    } else {
-                        res += `${oneSpace}${space}${key}: ${parseType(value)},\n`;
-                    }
+        function printObj(obj, level = -1, lk = false) {
+            level += 1;
+            let oneSpace = '    ';
+            let space = oneSpace.repeat(level);
+            let arKeys = Object.keys(obj);
+            let emptyObj = arKeys.length === 0;
+            let lK = arKeys.slice(-1);
+            let fNL = emptyObj ? '' : '\n';
+            let nS = emptyObj ? '' : space;
+            let res = `${fNL}${nS}{${fNL}`;
+            let lkk = '';
+            for (const [key, value] of Object.entries(obj)) {
+                if (typeof value === 'object' && !Array.isArray(value)) {
+                    res += `${oneSpace}${space}${key}: ${printObj(value, level, lK != key)}`;
+                } else {
+                    res += `${oneSpace}${space}${key}: ${parseType(value)}${lK != key ? ',' : ''}\n`;
                 }
-                level++;
-                space = oneSpace.repeat(Math.max(level-1, 0));
-                res += `${space}}\n`;
-                return res;
+                lkk = key;
             }
+            level++;
+            space = oneSpace.repeat(Math.max(level-1, 0));
+            let comma = level > 1 && lk ? ',' : '';
+            res += `${nS}}${comma}\n`;
+            return res;
+        }
 
             function parseType(val) {
                 let res = ``;
