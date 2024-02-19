@@ -25,9 +25,46 @@
         <pre id="pre_7"></pre>
 
         <script>
+
+            function printObj(obj, level = -1) {
+                level += 1;
+                let oneSpace = '    ';
+                let space = oneSpace.repeat(level);
+                let res = `\n${space}{\n`;
+                for (const [key, value] of Object.entries(obj)) {
+                    if (typeof value === 'object' && !Array.isArray(value)) {
+                        res += `${oneSpace}${space}${key}: ${printObj(value, level)}`;
+                    } else {
+                        res += `${oneSpace}${space}${key}: ${parseType(value)},\n`;
+                    }
+                }
+                level++;
+                space = oneSpace.repeat(Math.max(level-1, 0));
+                res += `${space}}\n`;
+                return res;
+            }
+
+            function parseType(val) {
+                let res = ``;
+                switch (typeof val) {
+                    case 'Number':
+                        res = `${val}`
+                        break;
+                    case 'string':
+                        res = `'${val}'`;
+                        break;
+                    case 'object':
+                        res = `[${val}]`;
+                        break;
+                    default:
+                        res = `${val}`;
+                }
+                return res;
+            }
+
             const app = window.Telegram.WebApp;
             document.querySelector('#pre_1').innerHTML = app.initData;
-            document.querySelector('#pre_2').innerHTML = app.initDataUnsafe;
+            document.querySelector('#pre_2').innerHTML = (typeof app.initDataUnsafe === 'object') ? printObj(app.initDataUnsafe) : app.initDataUnsafe;
             document.querySelector('#pre_3').innerHTML = app.platform;
             document.querySelector('#pre_4').innerHTML = app.version;
             document.querySelector('#pre_5').innerHTML = app.viewportHeight;
