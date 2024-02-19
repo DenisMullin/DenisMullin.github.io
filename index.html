@@ -8,9 +8,28 @@
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
     </head>
     <body>
-        <h1>web app</h1>
+        
+        <p>window.Telegram.WebApp.initData</p>
+        <pre id="pre_1"></pre>
+        <p>window.Telegram.WebApp.initDataUnsafe</p>
+        <pre id="pre_2"></pre>
+        <p>window.Telegram.WebApp.platform</p>
+        <pre id="pre_3"></pre>
+        <p>window.Telegram.WebApp.version</p>
+        <pre id="pre_4"></pre>
+        <p>window.Telegram.WebApp.viewportHeight</p>
+        <pre id="pre_5"></pre>
+        <p>window.Telegram.WebApp.viewportStableHeight</p>
+        <pre id="pre_6"></pre>
+
         <script>
             const app = window.Telegram.WebApp;
+            document.querySelector('#pre_1').innerHTML = app.initData;
+            document.querySelector('#pre_2').innerHTML = app.initDataUnsafe;
+            document.querySelector('#pre_3').innerHTML = app.platform;
+            document.querySelector('#pre_4').innerHTML = app.version;
+            document.querySelector('#pre_5').innerHTML = app.viewportHeight;
+            document.querySelector('#pre_6').innerHTML = app.viewportStableHeight;
         </script>
     </body>
 </html>
