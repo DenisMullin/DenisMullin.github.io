@@ -12,6 +12,7 @@
     --my-theme-button_text_color: #ffffff;
     --my-theme-accent_text_color: #2ea6ff;
     --my-theme-secondary_bg_color: #131415;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     --click_color: rgba(152, 152, 157, 0.24);
 }
 
