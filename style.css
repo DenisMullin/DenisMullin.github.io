@@ -1,26 +1,98 @@
+:root {
+    --my-theme-hint_color: #b1c3d5;
+    --my-theme-bg_color: #18222d;
+    --my-theme-header_bg_color: #131415;
+    --my-theme-button_color: #2ea6ff;
+    --my-theme-text_color: #ffffff;
+    --my-theme-subtitle_text_color: #b1c3d5;
+    --my-theme-section_header_text_color: #b1c3d5;
+    --my-theme-destructive_text_color: #ef5b5b;
+    --my-theme-section_bg_color: #18222d;
+    --my-theme-link_color: #62bcf9;
+    --my-theme-button_text_color: #ffffff;
+    --my-theme-accent_text_color: #2ea6ff;
+    --my-theme-secondary_bg_color: #131415;
+    --click_color: rgba(152, 152, 157, 0.24);
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
-html {
-    background-color: var(--tg-theme-bg-color);
-}
-
 body {
-    color: var(--tg-theme-text-color); 
-    width: 80%;
-    margin: 0 auto;
-    height: 100%;
-}
-
-main {
+    background-color: var(--my-theme-secondary_bg_color);
+    color: var(--my-theme-text-color); 
     width: 100%;
     height: 100%;
+    color: var(--my-theme-text_color);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#base {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.animate {
+    transition: top 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
+.f {
     display: flex;
 }
 
-#video {
-    width: 100%;
+.f-col {
+    flex-direction: column;
+}
 
+.f-row {
+    flex-direction: row;
+}
+
+.logo img {
+    border-radius: 12px;
+}
+
+.coin .logo,
+.coin .expand {
+    width: 24px;
+    height: 24px;
+}
+
+.svg {
+    width: 24px;
+    height: 24px;
+}
+
+.coin .name {
+    flex: 1 0 auto;
+    padding-left: 10px;
+    line-height: 24px;
+}
+
+.coin {
+    background-color: var(--my-theme-bg_color);
+    padding: 15px 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.1s ease;
+    transition: opacity 0.1s ease;
+    transition: background-color 0.1s ease;
+}
+
+.coin:active * {
+    opacity: 0.8;
+}
+.coin:active {
+    background-color: var(--click_color);
+    transform: scale(0.99);
+}
+
+.expand .svg {
+    transform: rotate(90deg);
 }
